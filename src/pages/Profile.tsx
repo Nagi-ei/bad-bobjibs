@@ -1,12 +1,16 @@
 import { User, Settings, Bell } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import BottomNav from '../components/ui/BottomNav';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 export default function Profile() {
   return (
     <div className="flex flex-col h-screen bg-background">
       <main className="flex-1 p-4">
-        <h1 className="text-2xl font-bold mb-4">User Profile</h1>
+        <div className="flex justify-between items-center mb-4">
+          <h1 className="text-2xl font-bold">User Profile</h1>
+          <ThemeToggle />
+        </div>
         <div className="flex flex-col items-center mb-6">
           <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center mb-2">
             <User className="h-12 w-12 text-primary-foreground" />
